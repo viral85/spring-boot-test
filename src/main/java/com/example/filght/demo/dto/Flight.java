@@ -25,19 +25,19 @@ public class Flight {
 	}
 
 	public Date getDepartureTime() {
-		return departureTime;
+		return null != departureTime ? new Date(departureTime.getTime()) : departureTime;
 	}
 
 	public void setDepartureTime(Date departureTime) {
-		this.departureTime = departureTime;
+		this.departureTime = new Date(departureTime.getTime());
 	}
 
 	public Date getArrivalTime() {
-		return arrivalTime;
+		return null != arrivalTime ? new Date(arrivalTime.getTime()) : arrivalTime;
 	}
 
 	public void setArrivalTime(Date arrivalTime) {
-		this.arrivalTime = arrivalTime;
+		this.arrivalTime = new Date(arrivalTime.getTime());
 	}
 
 	@Override

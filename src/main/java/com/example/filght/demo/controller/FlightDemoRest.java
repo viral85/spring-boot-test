@@ -71,9 +71,6 @@ public class FlightDemoRest {
 			// manage to date for filter
 			Calendar cal = Calendar.getInstance();
 			cal.setTime(to);
-			// cal.add(Calendar.HOUR_OF_DAY, 23);
-			// cal.add(Calendar.MINUTE, 59);
-			// cal.add(Calendar.SECOND, 59);
 			cal.add(Calendar.DAY_OF_MONTH, 1);
 			to = cal.getTime();
 
