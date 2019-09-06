@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-
 public enum SortByEnum {
 	arrivalTime("arrivalTime"), departure("departure"), arrival("arrival"), departureTime("departureTime");
 
@@ -24,23 +23,23 @@ public enum SortByEnum {
 	SortByEnum(String label) {
 		this.label = label;
 	}
-	
+
 	// Methods
-		public static SortByEnum valueOfLabel(String label) {
-			return BY_LABEL.get(label.toUpperCase(Locale.getDefault()));
-		}
+	public static SortByEnum valueOfLabel(String label) {
+		return BY_LABEL.get(label.toUpperCase(Locale.getDefault()));
+	}
 
-		public static boolean equals(String sortBy) {
-			for (SortByEnum sortByEnum : values()) {
-				if (sortBy.equalsIgnoreCase(sortByEnum.label)) {
-					return true;
-				}
+	public static boolean equals(String sortBy) {
+		for (SortByEnum sortByEnum : values()) {
+			if (sortBy.equalsIgnoreCase(sortByEnum.label)) {
+				return true;
 			}
-			return false;
 		}
+		return false;
+	}
 
-		public String toString() {
-			return this.label;
-		}
+	public String toString() {
+		return this.label;
+	}
 
 }

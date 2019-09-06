@@ -23,22 +23,22 @@ public enum OrderEnum {
 	OrderEnum(String label) {
 		this.label = label;
 	}
-	
+
 	// Methods
-		public static OrderEnum valueOfLabel(String label) {
-			return BY_LABEL.get(label.toUpperCase(Locale.getDefault()));
-		}
+	public static OrderEnum valueOfLabel(String label) {
+		return BY_LABEL.get(label.toUpperCase(Locale.getDefault()));
+	}
 
-		public static boolean equals(String orderBy) {
-			for (OrderEnum orderEnum : values()) {
-				if (orderBy.equalsIgnoreCase(orderEnum.label)) {
-					return true;
-				}
+	public static boolean equals(String orderBy) {
+		for (OrderEnum orderEnum : values()) {
+			if (orderBy.equalsIgnoreCase(orderEnum.label)) {
+				return true;
 			}
-			return false;
 		}
+		return false;
+	}
 
-		public String toString() {
-			return this.label;
-		}
+	public String toString() {
+		return this.label;
+	}
 }
